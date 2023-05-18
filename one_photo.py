@@ -24,7 +24,7 @@ default_data_transform = transforms.Compose([
         transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])
     ])
 
-img_path = '/Users/nikitakocherin/workspace/diploma/1/pr1/data_leaves-2/IMG_20200904_063844.jpg' #place here your image
+img_path = 'h7.jpg' #place here your image
 img = cv2.imread(img_path, cv2.IMREAD_UNCHANGED)
 model_yolo = YOLO('diplom/yolo') #place here your yola_model
 #in case it crushes, rename file yolo to yolo.pt
