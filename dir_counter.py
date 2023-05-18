@@ -34,6 +34,7 @@ dict_plants = {'Alternariosis': 0,
                'Powdery Mildew': 0,
                'Downey Mildew': 0}
 model_yolo = YOLO('diplom/yolo') #place here your yola_model
+#in case it crushes, rename yolo to yolo.pt
 model_leaves = model
 model_leaves.load_state_dict(torch.load('diplom/best_model', map_location=torch.device('cpu'))) # place here your classifier model
 model_leaves.eval()
