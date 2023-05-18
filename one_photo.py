@@ -26,10 +26,10 @@ default_data_transform = transforms.Compose([
 
 img_path = '/Users/nikitakocherin/workspace/diploma/1/pr1/data_leaves-2/IMG_20200904_063844.jpg' #place here your image
 img = cv2.imread(img_path, cv2.IMREAD_UNCHANGED)
-model_yolo = YOLO('/Users/nikitakocherin/Downloads/best.pt') #place here your yola_model
+model_yolo = YOLO('diplom/yolo') #place here your yola_model
 results = model_yolo(img, show=False)
 model_leaves = model
-model_leaves.load_state_dict(torch.load('/Users/nikitakocherin/Downloads/1best', map_location=torch.device('cpu'))) # place here your classifier model
+model_leaves.load_state_dict(torch.load('diplom/best_model', map_location=torch.device('cpu'))) # place here your classifier model
 model_leaves.eval()
 
 for r in results:
